@@ -2,6 +2,13 @@ body {
     background-color: cadetblue;
 }
 
+#content {
+    background-color: darkkhaki;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
 img {
     visibility: hidden;
     width: 400px;
