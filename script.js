@@ -7,15 +7,17 @@ const insertData = document.querySelector("#chooseArticle");
 const btnBack = document.querySelector("#back");
 const btnForward = document.querySelector("#forward");
 
+[btnBack.disabled, btnForward.disabled] = [true, true];
+
 const urlAPI = "d1cb154147684011afda58be32a45cf9"
 
 insertData.addEventListener("keyup", (event) => {
     if (event.key == "Enter"){
+        btnForward.disabled = false;
         printNews(currentDate, urlAPI, articleNumber)
     }
 })
 
-btnBack.disabled = true;
 btnBack.addEventListener("click", () => {
     if (articleNumber > 0){
         articleNumber--;
